@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+
+public class Exceptionhandling {
+	
+	Scanner sc=new Scanner(System.in);
+	int arc=sc.nextInt();
+	int id_no[]=new int[arc];
+	String name[]=new String[arc];
+	int countdays=23;
+	int present[]=new int[arc];
+	int absent[]=new int[arc];
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+try{
+		System.out.println("enter the no.of students attenance details:");
+		Exceptionhandling ex=new Exceptionhandling();
+		ex.get();
+		ex.display();
+}
+catch(ArrayIndexOutOfBoundsException e1)
+{
+System.out.println(e1);
+System.out.println("check the array index value.");
+}
+catch(ArithmeticException e)
+{
+	System.out.println(e);
+	System.out.println("check the percentage divider value.");
+}
+finally
+{
+	System.out.println("execute the percentage.");
+}
+
+
+
+			
+				}
+		
+		
+		
+public void get()throws ArrayIndexOutOfBoundsException                            //arrayindexout0f bounds exception
+{
+	for(int i=0;i<arc;i++)
+			{
+		System.out.println("rollno"+"\tname");
+		id_no[i]=sc.nextInt();
+		name[i]=sc.next();
+		
+			}
+			
+}
+
+	public void display()throws ArithmeticException                             //arithmetic exception
+	{for(int i=0;i<arc;i++)
+	{
+		
+		System.out.println("\tdayspresent"+"\tdays absent");
+		present[i]=sc.nextInt();
+		absent[i]=sc.nextInt();
+		int percentage=(countdays/present[i]);
+		
+		
+		
+	}
+	System.out.println("the toatal days present in percentage");
+
+	}
+
+}
