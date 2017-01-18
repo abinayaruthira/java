@@ -1,0 +1,31 @@
+
+import java.util.*;
+public class Inherit {
+
+	private int a=10;
+	public int b=20;
+	public int c=30;
+	
+	public Inherit()
+	{
+		System.out.println("Arithmetic operation.");
+	}
+}
+
+class Value extends Inherit
+{
+	private int x=10;
+	private int y=20;
+	public Value()
+	{
+		System.out.println("relational operation");
+	}
+	
+	public static void main(String [] args)
+	{
+		
+		Value obj=new Value();
+		
+		
+	}
+}
